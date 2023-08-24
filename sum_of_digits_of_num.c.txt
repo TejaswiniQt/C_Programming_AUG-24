@@ -1,0 +1,29 @@
+//Program to add digits of a number
+
+#include <stdio.h>
+
+int sum_of_entered_num(int num);
+
+int main()
+{
+    int num,res;
+    printf("Enter number: ");
+    scanf("%d",&num);
+    res = sum_of_entered_num(num);
+    printf("Sum of entered num : %d\n",res);
+   
+    return 0;
+}
+
+int sum_of_entered_num(int num)
+{
+    int rem,sum=0;
+    while(num != 0)
+    {
+        rem = num % 10;
+        sum = sum + rem;
+        num = num / 10;
+    }
+    return sum;
+}
+
